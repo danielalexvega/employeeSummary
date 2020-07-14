@@ -70,7 +70,6 @@ function createTeamMember(data) {
         teammember = new Intern(employeeName, employeeID, employeeEmail, detail);
     }
     employeeData.push(teammember);
-    console.log(employeeData);
 
     askMore().then(({ confirm }) => {
         if (confirm) {
