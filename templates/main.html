@@ -15,18 +15,24 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 jumbotron mb-3 team-heading">
-                <h1 class="text-center">My Team</h1>
+            <div class="col-12 jumbotron mb-3 team-heading bg-primary text-white">
+                <h1 class="display-2 text-center">My Team</h1>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="team-area col-12 d-flex justify-content-center">
+            <div class="team-area col-12 d-flex justify-content-center flex-wrap">
                 {{ team }}
             </div>
+            
         </div>
     </div>
+    <footer class="page-footer font-small blue">
+        <div class="text-center py-3 bg-primary text-light">© 2020 Copyright:
+            <a href="https://www.linkedin.com/in/daniel-vega-b4151537/" class='text-light'> Daniel Vega</a>
+        </div>
+    </footer>
 </body>
 
 </html>
