@@ -3,6 +3,7 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const path = require("path");
 const fs = require("fs");
+const render = require("./lib/htmlRenderer");
 const { askEmployeeType, askManager, askEngineer, askIntern, askMore, askRender, askStartOver } = require('./questions');
 
 const employeeData = [];
@@ -21,7 +22,6 @@ function createFile(){
 }
 
 
-const render = require("./lib/htmlRenderer");
 //look that up
 // ******************************************* //
 const { listenerCount } = require("process");
@@ -98,7 +98,6 @@ function createTeamMember(data) {
 //I need to know what type of employee it is
 function getUserData() {
     try {
-
         //maybe delete team.html file...
         employeeData.length = 0;
         createFile();
