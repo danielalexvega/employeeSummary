@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 
-const validateResponse = (input, type) => (input.length > 0 ? true : console.log(`Please provide a valid ${type}`))
+const validateResponse = (input) => (input.trim().length > 0 ? true : console.log('Please provide a valid input'));
+
 
 module.exports = {
     askEmployeeType: () => {
@@ -19,25 +20,25 @@ module.exports = {
                 type: 'input',
                 message: "What is the Manager's name?",
                 name: 'employeeName',
-                validate: validateResponse(input, 'name')
+                validate: validateResponse
             },
             {
                 type: 'input',
                 message: "What is the Manager's ID#?",
                 name: 'employeeID',
-                validate: validateResponse(input, 'employee id')
+                validate: validateResponse
             },
             {
                 type: 'input',
                 message: "What is the Manager's email address?",
                 name: 'employeeEmail',
-                validate: validateResponse(input, 'email address')
+                validate: validateResponse
             },
             {
                 type: 'input',
                 message: "What is the Manager's office number?",
                 name: 'managerOffice',
-                validate: validateResponse(input, 'office number')
+                validate: validateResponse
             }
         ]);
     },
@@ -47,25 +48,25 @@ module.exports = {
                 type: 'input',
                 message: "What is the Engineer's name?",
                 name: 'employeeName',
-                validate: validateResponse(input, 'name')
+                validate: validateResponse
             },
             {
                 type: 'input',
                 message: "What is the Engineer's ID#?",
                 name: 'employeeID',
-                validate: validateResponse(input, 'employee id')
+                validate: validateResponse
             },
             {
                 type: 'input',
                 message: "What is the Engineer's email address?",
                 name: 'employeeEmail',
-                validate: validateResponse(input, 'email address')
+                validate: validateResponse
             },
             {
                 type: 'input',
                 message: "What is the Engineer's GitHub account?",
                 name: 'engineerGithub',
-                validate: validateResponse(input, 'github account')
+                validate: validateResponse
             }
         ]);
     },
@@ -75,25 +76,25 @@ module.exports = {
                 type: 'input',
                 message: "What is the intern's name?",
                 name: 'employeeName',
-                validate: validateResponse(input, 'name')
+                validate: validateResponse
             },
             {
                 type: 'input',
                 message: "What is the intern's ID#?",
                 name: 'employeeID',
-                validate: validateResponse(input, 'employee id')
+                validate: validateResponse
             },
             {
                 type: 'input',
                 message: "What is the intern's email address?",
                 name: 'employeeEmail',
-                validate: validateResponse(input, 'email address')
+                validate: validateResponse
             },
             {
                 type: 'input',
                 message: "What is the intern's University?",
                 name: 'internUniversity',
-                validate: validateResponse(input, 'university')
+                validate: validateResponse
             }
         ]);
     },

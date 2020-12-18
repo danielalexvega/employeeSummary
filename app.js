@@ -12,10 +12,10 @@ let newFile;
 let OUTPUT_DIR;
 let outputPath;
 
-function createFile(){
+function createFile() {
     OUTPUT_DIR = path.resolve(__dirname, "output");
     console.log(OUTPUT_DIR);
-    if(!fs.existsSync(OUTPUT_DIR)) {
+    if (!fs.existsSync(OUTPUT_DIR)) {
         fs.mkdirSync(OUTPUT_DIR);
     }
     outputPath = path.join(OUTPUT_DIR, "team.html");
@@ -28,6 +28,12 @@ const { listenerCount } = require("process");
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+
+
+//destructering 
+
+// const {managerName, managerId,} = answers;
+// managerName
 
 
 function promptUser() {
@@ -55,10 +61,11 @@ function promptUser() {
 
 //function to create the object, and push object into employeeArray
 function createTeamMember(data) {
+    data = data.map(detail => detail.trim());
     let [employeeName, employeeID, employeeEmail, employeeRole, detail] = data;
     employeeID = parseInt(employeeID);
     let teammember;
-    if(employeeRole === 'Manager') {
+    if (employeeRole === 'Manager') {
         detail = parseInt(detail);
     }
 
@@ -101,7 +108,7 @@ function getUserData() {
         //maybe delete team.html file...
         employeeData.length = 0;
         createFile();
-        
+
         promptUser();
     } catch (err) {
         console.log('There was an error');
